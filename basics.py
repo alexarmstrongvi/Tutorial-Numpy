@@ -337,9 +337,9 @@ arr_2_2_5d = np.concatenate((arr_2_2_2, arr_2_2_3), axis=-1)
 arr_2_2_5c = np.r_['-1', arr_2_2_2, arr_2_2_3] # note the brackets
 
 # Stacking on new axis (arrays must be the same shape)
-arr_1_2_2_2 = np.stack((arr_2_2_2, arr_2_2_2), axes=0) # default
-arr_2_2_1_2 = np.stack((arr_2_2_2, arr_2_2_2), axes=2) # default
-arr_2_2_2_1 = np.stack((arr_2_2_2, arr_2_2_2), axes=-1) # default
+arr_1_2_2_2 = np.stack((arr_2_2_2, arr_2_2_2), axis=0) # default
+arr_2_2_1_2 = np.stack((arr_2_2_2, arr_2_2_2), axis=2) # default
+arr_2_2_2_1 = np.stack((arr_2_2_2, arr_2_2_2), axis=-1) # default
 
 assert arr_2_2_5a.shape == (2,2,5)
 test.assert_array_equal(arr_2_2_5a, arr_2_2_5b)
